@@ -68,8 +68,8 @@ export default function SimpleTabs() {
             <Tab label="Item Two" {...a11yProps(1)} />
         </Link>
         */}
-        <Tab className={classes.tab} label="Item One" {...a11yProps(0)} href="test"/>
-        <Tab className={classes.tab} label="Item Two" {...a11yProps(1)} href="read"/>
+        <Tab className={classes.tab} label="タスクの確認" {...a11yProps(0)} href="test"/>
+        <Tab className={classes.tab} label="タスクの追加" {...a11yProps(1)} href="read"/>
 
 
         </Tabs>
