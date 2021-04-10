@@ -1,12 +1,18 @@
 import React from "react"
 import ReactDOM from 'react-dom';
 
-import GlobalNav from "./GlobalNav"
+import { BrowserRouter, Route } from 'react-router-dom';
 
+
+import GlobalNav from "./GlobalNav"
+import Test from "./Test"
 export default function App(){
     return(
         <div>
-            svsvcscscsc
+            <GlobalNav />
+            <BrowserRouter>
+                <Route path="/test" exact component={Test}/>
+            </BrowserRouter>
         </div>
         
     )
