@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 
 import GlobalNav from "./GlobalNav"
 
-function App(){
+export default function App(){
     return(
         <div>
-            <GlobalNav />
+            svsvcscscsc
         </div>
         
     )
