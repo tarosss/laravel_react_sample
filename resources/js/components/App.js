@@ -5,13 +5,16 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 
 import GlobalNav from "./GlobalNav"
+import AllTasks from "./AllTasks"
+
 import Test from "./Test"
 export default function App(){
     return(
         <div>
             <GlobalNav />
             <BrowserRouter>
-                <Route path="/test" exact component={Test}/>
+                <Route path="/alltasks" exact component={AllTasks}/>
+                <Route path="/read" exact component={Test}/>
             </BrowserRouter>
         </div>
         

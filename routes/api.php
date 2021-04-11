@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get("alltasks" , function(Request $request){
+    $data = \App\Todo::all();
+    return response()->json(["tasks" => $data]);
+});
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
