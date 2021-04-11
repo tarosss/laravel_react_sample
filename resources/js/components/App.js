@@ -13,7 +13,7 @@ export default function App(){
         <div>
             <GlobalNav />
             <BrowserRouter>
-                <Route path="/alltasks" exact component={AllTasks}/>
+                <Route path="/alltask" exact component={AllTasks}/>
                 <Route path="/read" exact component={Test}/>
             </BrowserRouter>
         </div>
