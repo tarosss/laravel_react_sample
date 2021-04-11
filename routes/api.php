@@ -14,9 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("alltasks" , function(Request $request){
-    $data = \App\Todo::all();
-    return response()->json(["tasks" => $data]);
+//Route::apiResource("alltasks" , "\App\Http\Controllers\TaskController@getData");
+    //$data = \App\Todo::all();
+    //return response()->json(["tasks" => $data]);
+
+/*
+
+Route::apiResource("alltasks" , function(Request $request){
+    $data = Request::all();
+    return response()->json(["data" => $data]);
+});
+*/
+
+//Route::apiResource("alltasks", "TaskController");
+Route::group(["middleware" => ["api"]], function(){
+    Route::resource("alltasks", "TaskController", ["except" => ["create", "edit" ]]);
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
